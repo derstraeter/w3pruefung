@@ -1,17 +1,127 @@
 body {
-  margin: 50% 50%;
+	margin: 4rem;
+	background: #fff8e8;
+	color: #4e4e4e;
 }
 
-h1 {
-  font-family: 'Zilla Slab', serif;
-  color: #4e4e4e;
+h1,
+h2 {
+	font-family: "Zilla Slab", serif;
+	color: #4e4e4e;
 }
 
 p {
-  font-family: font-family: 'Lato', sans-serif;
-  color: #4e4e4e;
+	font-family: "Lato", sans-serif;
+	color: #4e4e4e;
 }
 
-tr {
-  padding: 1rem;
+table {
+	margin-top: 3rem;
+}
+
+th {
+	font-family: "Zilla Slab", serif;
+	font-size: 20px;
+}
+
+th,
+td {
+	padding: 15px;
+}
+
+td {
+	font-family: "Lato", sans-serif;
+	text-align: center;
+	font-size: 20px;
+}
+
+table input[type="number"] {
+	width: 100%;
+	text-align: center;
+}
+
+tfoot td {
+	font-family: "Zilla Slab", serif;
+	text-align: start;
+}
+
+input {
+	padding: 15px;
+	font-size: 16px;
+	border: 1px solid white;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+input[type="radio"] {
+	appearance: none;
+	border: 1px solid #fff;
+}
+
+.userdata-wrapper {
+	display: flex;
+}
+
+.contact-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+	flex-wrap: nowrap;
+}
+
+.contact-wrapper input,
+.billing-wrapper {
+	max-width: 300px;
+}
+
+.billing-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	width: 45%;
+}
+
+.street-wrapper input:nth-of-type(2) {
+	width: 29%;
+}
+
+.radio-wrapper {
+	display: flex;
+	width: 15%;
+	justify-content: space-between;
+}
+
+.radio-1,
+.radio-2 {
+	display: flex;
+	flex-direction: column;
+}
+
+.button-wrapper {
+	width: 20%;
+	display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.btn-primary {
+	padding: 7px 20px;
+	font-family: "Zilla Slab", serif;
+	font-size: 12px;
+	border-radius: 5px;
+	cursor: pointer;
+	background: #4e4e4e;
+	color: #fff8e8;
+	border: 0;
+}
+
+.btn-secondary {
+  padding: 7px 20px;
+	font-family: "Zilla Slab", serif;
+	font-size: 12px;
+	border-radius: 5px;
+	cursor: pointer;
+  color: #4e4e4e;
+  background: #fff8e8;
+	border: 1px solid #4e4e4e;
 }

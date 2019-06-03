@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,19 +7,16 @@
 		<style>
 			@import url("https://fonts.googleapis.com/css?family=Lato|Zilla+Slab&display=swap&subset=latin-ext");
 		</style>
+		<title>Wunschmehl bestellen</title>
 		<link rel="stylesheet" href="styles.css" />
-		<title>Document</title>
-		<link
-			rel="stylesheet"
-			href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-		/>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	</head>
 	<body>
 		<h1>Ihre Mehlkiste von Korn und Schrot</h1>
 		<h2>Mein Wunschmehl</h2>
-		<form action="/order.php" method="POST">
+		<form action="order.php" method="POST">
 			<table>
 				<thead>
 					<tr>
@@ -295,42 +292,61 @@
 				berechnet.)) inkl. gesetzl. MwSt., zzgl. Service- und Lieferpauschale
 				von 5,90 EUR
 			</p>
-			<h1>Kontaktdaten</h1>
-			<label for="surname">Vorname*</label>
-			<input type="text" name="surname" required />
+			<div class="userdata-wrapper">
+				<div class="contact-wrapper">
+					<h1>Kontaktdaten</h1>
+					<p>Vorname*</p>
+					<input type="text" name="surname" required />
 
-			<label for="name">Name*</label>
-			<input type="text" name="name" required />
+					<p>Name*</p>
+					<input type="text" name="name" required />
 
-			<label for="e-mail">E-Mail*</label>
-			<input type="email" name="e-mail" required />
+					<p>E-Mail*</p>
+					<input type="email" name="e-mail" required />
 
-			<label for="phone">Telefonnummer*</label>
-			<input type="text" name="phone" required />
+					<p>Telefonnummer*</p>
+					<input type="number" name="phone" required />
+				</div>
+				<div class="billing-wrapper">
+					<h1>Lieferadresse</h1>
+					<p>Straße/Hausnummer*</p>
+					<div class="street-wrapper">
+						<input type="text" name="street" required />
+						<input type="text" name="housenr" required />
+					</div>
 
-			<h2>Lieferadresse</h2>
-			<label for="street">Straße*</label>
-			<input type="text" name="street" required />
+					<p>Postleitzahl*</p>
+					<input type="text" name="zipcode" required />
 
-			<label for="housenr">Hausnummer*</label>
-			<input type="text" name="housenr" required />
-
-			<label for="zipcode">Postleitzahl*</label>
-			<input type="text" name="zipcode" required />
-
-			<label for="city">Ort*</label>
-			<input type="text" name="city" required />
-			<button type="">Abbrechen</button>
-			<button type="submit">Bestellen</button>
+					<p>Ort*</p>
+					<input type="text" name="city" required />
+				</div>
+			</div>
 
 			<h2>Zahlweise</h2>
-			<label for="cash">Barzahlung</label>
-			<input type="radio" name="cash" />
-			<label for="cash">Rechnung</label>
-			<input type="radio" name="bill" />
+			<div class="radio-wrapper">
+				<div class="radio-1">
+					<p>Barzahlung</p>
+					<input type="radio" name="billing" />
+				</div>
+				<div class="radio-2">
+					<p>Rechnung</p>
+					<input type="radio" name="billing" />
+				</div>
+			</div>
 			<h2>Liefertertermin für die Mehlkiste*</h2>
-			<input name="date" type="text" id="datepicker" />
+			<input
+				name="date"
+				onfocus="if (this.value=='search') this.value = ''"
+				value="Hier klicken"
+				type="text"
+				id="datepicker"
+			/>
+			<div class="button-wrapper">
+				<button btn btn-secondary" type="reset" >Abbrechen</button>
+				<button class="btn btn-primary" type="submit">Bestellen</button>
+			</div>
 		</form>
-		<script src="/main.js"></script>
+		<script src="main.js"></script>
 	</body>
 </html>
