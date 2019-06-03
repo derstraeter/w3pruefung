@@ -1,0 +1,17 @@
+body {
+  margin: 50% 50%;
+}
+
+h1 {
+  font-family: 'Zilla Slab', serif;
+  color: #4e4e4e;
+}
+
+p {
+  font-family: font-family: 'Lato', sans-serif;
+  color: #4e4e4e;
+}
+
+tr {
+  padding: 1rem;
+}
