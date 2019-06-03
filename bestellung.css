@@ -1,0 +1,21 @@
+body {
+	margin: 4rem;
+	background: #fff8e8;
+  color: #4e4e4e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1,
+h2 {
+	font-family: "Zilla Slab", serif;
+	color: #4e4e4e;
+}
+
+p {
+  max-width: 500px;
+	font-family: "Lato", sans-serif;
+  color: #4e4e4e;
+  line-height: 1.5;
+}
