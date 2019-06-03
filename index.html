@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+		/>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	</head>
+	<body>
+		<h1>Ihre Mehlkiste von Korn und Schrot</h1>
+		<h2>Mein Wunschmehl</h2>
+		<form action="/order.php" method="POST">
+			<table>
+				<thead>
+					<tr>
+						<th>Sorte</th>
+						<th>Typ</th>
+						<th>300g</th>
+						<th>500g</th>
+						<th>1000g</th>
+						<th>Kilopreis**</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="product-name">Weizenmehl</td>
+						<td>405</td>
+						<td>
+							<input
+								name="Weizenmehl405-300g"
+								type="number"
+								id="wm405-300"
+								value="0"
+								min="0"
+							/>
+						</td>
+						<td>
+							<input
+								name="Weizenmehl405-500g"
+								type="number"
+								id="wm405-500"
+								value="0"
+							/>
+						</td>
+						<td>
+							<input
+								name="Weizenmehl405-1000g"
+								type="number"
+								id="wm405-1000"
+								value="0"
+							/>
+						</td>
+						<td>2,20 EUR</td>
+					</tr>
+					<tr>
+						<td class="product-name"></td>
+						<td>550</td>
+						<td>
+							<input
+								value="0"
+								name="Weizenmehl550-300g"
+								type="number"
+								id="wm550-300"
+							/>
+						</td>
+						<td>
+							<input
+								value="0"
+								name="Weizenmehl550-500g"
+								type="number"
+								id="wm550-500"
+							/>
+						</td>
+						<td>
+							<input
+								value="0"
+								name="Weizenmehl550-1000g"
+								type="number"
+								id="wm550-1000"
+							/>
+						</td>
+						<td>2,40 EUR</td>
+					</tr>
+					<tr>
+						<td class="product-name"></td>
+						<td>2200</td>
+						<td>
+							<input
+								value="0"
+								name="Weizenmehl2200-300g"
+								type="number"
+								id="wm2200-300"
+							/>
+						</td>
+						<td>
+							<input
+								value="0"
+								name="Weizenmehl2200-500g"
+								type="number"
+								id="wm2200-500"
+							/>
+						</td>
+						<td>
+							<input
+								value="0"
+								name="Weizenmehl2200-1000g"
+								type="number"
+								id="wm2200-1000"
+							/>
+						</td>
+						<td>2,55 EUR</td>
+					</tr>
+					<tr>
+						<td class="product-name"></td>
+						<td>Vollkorn</td>
+						<td>
+							<input
+								value="0"
+								name="WeizenmehlV-300g"
+								type="number"
+								id="wmv-300"
+							/>
+						</td>
+						<td>
+							<input
+								value="0"
+								name="WeizenmehlV-500g"
+								type="number"
+								id="wmv-500"
+							/>
+						</td>
+						<td>
+							<input
+								value="0"
+								name="WeizenmehlV-1000g"
+								type="number"
+								id="wmv-1000"
+							/>
+						</td>
+						<td>2,70 EUR</td>
+					</tr>
+					<tr>
+						<td class="product-name">Roggenmehl</td>
+						<td>610</td>
+						<td>
+							<input
+								value="0"
+								name="Roggenmehl610-300g"
+								type="number"
+								id="rg610-300"
+							/>
+						</td>
+						<td>
+							<input
+								value="0"
+								name="Roggenmehl610-500g"
+								type="number"
+								id="rg610-500"
+							/>
+						</td>
+						<td>
+							<input
+								value="0"
+								name="Roggenmehl610-1000g"
+								type="number"
+								id="rg610-1000"
+							/>
+						</td>
+						<td>1,85 EUR</td>
+					</tr>
+					<tr>
+						<td class="product-name"></td>
+						<td>815</td>
+						<td>
+							<input
+								value="0"
+								name="Roggenmehl815-300g"
+								type="number"
+								id="rg815-300"
+							/>
+						</td>
+						<td>
+							<input
+								value="0"
+								name="Roggenmehl815-500g"
+								type="number"
+								id="rg815-500"
+							/>
+						</td>
+						<td>
+							<input
+								value="0"
+								name="Roggenmehl815-1000g"
+								type="number"
+								id="rg815-1000"
+							/>
+						</td>
+						<td>2,65 EUR</td>
+					</tr>
+					<tr>
+						<td class="product-name">Dinkelmehl</td>
+						<td>Dunst</td>
+						<td>
+							<input value="0" name="DinkelD-300g" type="number" id="dkd-300" />
+						</td>
+						<td>
+							<input value="0" name="DinkelD-500g" type="number" id="dkd-500" />
+						</td>
+						<td>
+							<input
+								value="0"
+								name="DinkelD-1000g"
+								type="number"
+								id="dkd-1000"
+							/>
+						</td>
+						<td>2,65 EUR</td>
+					</tr>
+					<tr>
+						<td class="product-name"></td>
+						<td>Vollkorn</td>
+						<td>
+							<input value="0" name="DinkelV-300g" type="number" id="dkv-300" />
+						</td>
+						<td>
+							<input value="0" name="DinkelV-500g" type="number" id="dkv-500" />
+						</td>
+						<td>
+							<input
+								value="0"
+								name="DinkelV-1000g"
+								type="number"
+								id="dkv-1000"
+							/>
+						</td>
+						<td>2,45 EUR</td>
+					</tr>
+					<tr>
+						<td class="product-name">Spezialmehl</td>
+						<td>Hanfmehl</td>
+						<td>
+							<input value="0" name="Hanf-300g" type="number" id="h-300" />
+						</td>
+						<td>
+							<input value="0" name="Hanf-500g" type="number" id="h-500" />
+						</td>
+						<td>
+							<input value="0" name="Hanf-1000g" type="number" id="h-1000" />
+						</td>
+						<td>6,50 EUR</td>
+					</tr>
+					<tr>
+						<td class="product-name"></td>
+						<td>Pizza Tipo 00</td>
+						<td>
+							<input value="0" name="Pizza-300g" type="number" id="p-300" />
+						</td>
+						<td>
+							<input value="0" name="Pizza-500g" type="number" id="p-500" />
+						</td>
+						<td>
+							<input value="0" name="Pizza-1000g" type="number" id="p-1000" />
+						</td>
+						<td>2,40 EUR</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Preis der Mehlkiste</td>
+						<td id="box-price">
+							<input type="text" name="Kistenpreis" value="0,00 EUR" readonly />
+						</td>
+					</tr>
+					<tr>
+						<td>Gesamtpreis</td>
+						<td id="total-price">
+							<input type="text" name="Gesamtpreis" value="0,00 EUR" readonly />
+						</td>
+					</tr>
+					<tr></tr>
+				</tfoot>
+			</table>
+			<p>
+				** Preis ((Wird nach jeder Auswahl von Mehlsorten und Menge neu
+				berechnet.)) inkl. gesetzl. MwSt., zzgl. Service- und Lieferpauschale
+				von 5,90 EUR
+			</p>
+			<h1>Kontaktdaten</h1>
+			<label for="surname">Vorname*</label>
+			<input type="text" name="surname" required />
+
+			<label for="name">Name*</label>
+			<input type="text" name="name" required />
+
+			<label for="e-mail">E-Mail*</label>
+			<input type="email" name="e-mail" required />
+
+			<label for="phone">Telefonnummer*</label>
+			<input type="text" name="phone" required />
+
+			<h2>Lieferadresse</h2>
+			<label for="street">Straße*</label>
+			<input type="text" name="street" required />
+
+			<label for="housenr">Hausnummer*</label>
+			<input type="text" name="housenr" required />
+
+			<label for="zipcode">Postleitzahl*</label>
+			<input type="text" name="zipcode" required />
+
+			<label for="city">Ort*</label>
+			<input type="text" name="city" required />
+			<button type="">Abbrechen</button>
+			<button type="submit">Bestellen</button>
+
+			<h2>Zahlweise</h2>
+			<label for="cash">Barzahlung</label>
+			<input type="radio" name="cash" />
+			<label for="cash">Rechnung</label>
+			<input type="radio" name="bill" />
+			<h2>Liefertertermin für die Mehlkiste*</h2>
+			<input name="date" type="text" id="datepicker" />
+		</form>
+		<script src="/main.js"></script>
+	</body>
+</html>
