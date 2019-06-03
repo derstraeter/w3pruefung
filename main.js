@@ -12,8 +12,11 @@ var pPrice = 240;
 
 //Umrechnung in Stückpreis
 var prices = {
+  // 300g Mehl, dezimal aufgerundet
   "wm405-300": (Math.round((wm405Price/3.33))/100).toFixed(2),
+  // 500g Mehl, dezimal aufgerundet
   "wm405-500": (Math.round((wm405Price/2))/100).toFixed(2),
+  // 1000g Mehl, dezimal aufgerundet
   "wm405-1000": (wm405Price/100).toFixed(2),
 
   "wm550-300": (Math.round((wm550Price/3.33))/100).toFixed(2),
